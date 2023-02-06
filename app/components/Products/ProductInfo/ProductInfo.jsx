@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../../Button/Button'
 import Delivery from '../../Delivery/Delivery'
 import Filling from '../../Filling/Filling'
@@ -9,6 +9,16 @@ import Stars from '../../Stars/Stars'
 import s from './ProductInfo.module.scss'
 
 const ProductInfo = ({ product }) => {
+	const [isAlert, setIsAlert] = useState(false)
+	const handlerClick = () => {
+		if (!isAlert) {
+			setIsAlert(true)
+			alert('Товар удален из корзины')
+		} else {
+			setIsAlert(false)
+			alert('Товар добавлен в корзину')
+		}
+	}
 	const colors = [
 		'#4287f5',
 		'#95a3ba',
@@ -52,7 +62,21 @@ const ProductInfo = ({ product }) => {
 					<Delivery />
 				</div>
 				<div className={s.info__btn}>
-					<Button title='В корзину' w='250px' h='37px' />
+					{isAlert ? (
+						<Button
+							handlerClick={handlerClick}
+							title='В корзину'
+							w='250px'
+							h='37px'
+						/>
+					) : (
+						<Button
+							handlerClick={handlerClick}
+							title='Удалить из корзины'
+							w='250px'
+							h='37px'
+						/>
+					)}
 				</div>
 			</div>
 		</div>

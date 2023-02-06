@@ -8,7 +8,15 @@ const Stars = ({ reviews }) => {
 			<AiFillStar />
 			<AiFillStar />
 			<AiFillStar />
-			<span>{reviews}</span>
+			<span
+				style={{
+					marginLeft: '10px',
+					textDecoration: 'underline',
+					cursor: 'pointer',
+				}}
+			>
+				{reviews}
+			</span>
 		</>
 	)
 }
