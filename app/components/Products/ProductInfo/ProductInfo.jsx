@@ -13,10 +13,10 @@ const ProductInfo = ({ product }) => {
 	const handlerClick = () => {
 		if (!isAlert) {
 			setIsAlert(true)
-			alert('Товар удален из корзины')
+			alert('Товар добавлен в корзину!')
 		} else {
 			setIsAlert(false)
-			alert('Товар добавлен в корзину')
+			alert('Товар удален из корзины!')
 		}
 	}
 	const colors = [
@@ -65,14 +65,14 @@ const ProductInfo = ({ product }) => {
 					{isAlert ? (
 						<Button
 							handlerClick={handlerClick}
-							title='В корзину'
+							title='Удалить из корзины'
 							w='250px'
 							h='37px'
 						/>
 					) : (
 						<Button
 							handlerClick={handlerClick}
-							title='Удалить из корзины'
+							title='В корзину'
 							w='250px'
 							h='37px'
 						/>
