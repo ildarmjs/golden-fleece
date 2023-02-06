@@ -1,0 +1,57 @@
+.info {
+	padding: 50px 0;
+	display: flex;
+	@media (max-width: 768px) {
+		display: block;
+	}
+	.col_one {
+		flex: 0 1 60%;
+		margin-right: 30px;
+	}
+	.col_two {
+		flex: 0 1 40%;
+	}
+	&__title {
+		font-size: 30px;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	&__name {
+		font-size: 22px;
+		margin-bottom: 15px;
+	}
+	&__stars {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	&__prices {
+		margin-bottom: 15px;
+		display: flex;
+		align-items: center;
+	}
+	&__filling {
+		margin-bottom: 15px;
+	}
+	&__delivery {
+		margin-bottom: 40px;
+	}
+
+	&__colors {
+		margin-bottom: 15px;
+		.colors {
+			display: flex;
+			.color {
+				cursor: pointer;
+				border-radius: 50%;
+				margin-right: 7px;
+				&:hover {
+					box-shadow: 0px 0px 0px 6px rgba(34, 60, 80, 0.2);
+				}
+			}
+		}
+	}
+	&__color_name {
+		margin-bottom: 15px;
+	}
+}

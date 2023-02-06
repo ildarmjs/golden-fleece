@@ -1,0 +1,36 @@
+.gallery {
+	display: flex;
+	align-items: center;
+	@media (max-width: 1100px) {
+		display: block;
+	}
+	&__image {
+		border: 1px solid #000;
+		width: 100%;
+		height: 500px;
+		position: relative;
+		margin-right: 20px;
+		@media (max-width: 1100px) {
+			margin-bottom: 20px;
+		}
+	}
+	&__list {
+		.item {
+			width: 100px;
+			height: 100px;
+			background: #333;
+			margin-bottom: 20px;
+			@media (max-width: 768px) {
+				width: 80px;
+				height: 80px;
+			}
+			@media (max-width: 479px) {
+				display: none;
+			}
+		}
+		@media (max-width: 1100px) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}

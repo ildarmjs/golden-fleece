@@ -1,9 +1,14 @@
-import ProductInfo from '@/app/components/Products/Product/ProductInfo'
+import ProductInfo from '@/app/components/Products/ProductInfo/ProductInfo'
+import Meta from '@/app/utils/Meta'
 import React from 'react'
 
 const Info = ({ product }) => {
-	console.log(product)
-	return <ProductInfo product={product} />
+	return (
+		<>
+			<Meta title='Диван клик кляк' description='Информация о товаре' />
+			<ProductInfo product={product} />
+		</>
+	)
 }
 export const getStaticPaths = async () => {
 	const res = await fetch(

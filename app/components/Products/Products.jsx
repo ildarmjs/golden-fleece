@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Product from './Product/Product'
-import s from './Products.module.css'
+import s from './Products.module.scss'
 const Products = ({ products }) => {
 	return (
 		<div className={s.products}>

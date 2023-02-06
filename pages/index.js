@@ -6,6 +6,7 @@ export default function Home({ products }) {
 		<>
 			<Meta title='Главная страница' description='Диваны' />
 			<h1>Диваны</h1>
+			<Products products={products} />
 			<br />
 			<Products products={products} />
 		</>
